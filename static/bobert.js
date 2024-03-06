@@ -27,6 +27,33 @@ async function copy(){
         },2000);
     },5);
 }
+async function copySmall(){
+    const img = await fetch(selected);
+    const blob = await img.blob();
+    const originalImage = new Image();
+    originalImage.src = URL.createObjectURL(blob);
+
+    originalImage.onload = async () => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 50;
+        canvas.height = 50;
+        ctx.drawImage(originalImage, 0, 0, 50, 50);
+        canvas.toBlob(async (resizedBlob) => {
+            await navigator.clipboard.write([
+                new ClipboardItem({ 'image/png': resizedBlob })
+            ]);
+            setTimeout(()=>{
+                document.getElementById("copied").hidden=false;
+                document.getElementById("copied").style.top=mousePos[1]+"px";
+                document.getElementById("copied").style.left=mousePos[0]+"px";
+                setTimeout(()=>{
+                    document.getElementById("copied").hidden=true;
+                },2000);
+            },5);
+        }, 'image/png');
+    };
+}
 function download(){
     document.getElementById("downloadClick").href=selected;
     document.getElementById("downloadClick").download=selected.split(".")[0];
