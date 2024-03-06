@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bobase</title>
+        <link href="global.css" media="only screen and (min-width: 480px)" rel="stylesheet">
+        <link rel="stylesheet" media="only screen and (max-width: 480px)" href="mobile.css">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+    </head>
+    <body onclick="noClick()">
+        <div id="banner">
+            <img src="bobert.png" id="icon">
+            <img src="banner.png" id="bannerImg"><br>
+            <p><%= boberts.length %> Boberts and counting</p>
+            <hr>
+        </div>
+        <div class="bobertWrapper">
+            <% for(var i=0;i<boberts.length;i++){ %>
+                    <div class="bobert" onclick="clicked('<%= boberts[i] %>')">
+                        <% if(official.includes(boberts[i].split(".")[0])){ %>
+                            <div class="officialMarker">
+                                <img src="bobertApproved.png"><br>
+                                Officially Approved Variant
+                            </div>
+                        <% } %>
+                        <img src="<%= boberts[i] %>"><br>
+                        <b><h2><%= boberts[i].split(".")[0] %></h2></b>
+                    </div>
+            <% } %>
+        </div>
+        <div id="copyBox" hidden>
+            <div class="copyBox" onclick="copy()">
+                Copy Image
+            </div>
+            <div class="copyBox" onclick="download()">
+                Download
+            </div>
+        </div>
+        <div id="copied" hidden>
+            Copied!
+        </div>
+        <a hidden href="bobert.png" id="downloadClick"></a>
+        <script src="bobert.js"></script>
+    </body>
+</html>

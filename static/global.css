@@ -1,0 +1,98 @@
+body{
+    background-color:#7b3506;
+    color:#ff6400;
+}
+img{
+    width:100%;
+    box-sizing:border-box;
+    padding:0.5rem;
+}
+.bobertWrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;
+}
+.bobert{
+    box-sizing:border-box;
+    background-color:#aa4d0e;
+    border-radius:25px;
+    border-style:solid;
+    border-color:#ff6400;
+    transition:1s;
+}
+.bobert h2{
+    text-align:center;
+}
+.bobert:hover{
+    transition:0.5s;
+    background-color:#7b3506;
+    cursor:pointer;
+    transform:scale(1.025);
+}
+.bobert:active{
+    transition:0.1s;
+    background-color:#f88335;
+    transform:scale(0.98);
+}
+#copyBox{
+    width:10rem;
+    height:2rem;
+    text-align:center;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.copyBox{
+    background-color:#ffffff;
+    color:#000000;
+    border-style:solid;
+    border-color:#000000;
+    height:50%;
+    margin:0px;
+    line-height:100%;
+    transition:0.5s;
+}
+.copyBox:hover{
+    background-color:#148148;
+    cursor:pointer;
+    transition:0.3s;
+}
+#copied{
+    background-color:#00D700;
+    color:#ffffff;
+    border-style:solid;
+    border-color:#ffffff;
+    height:1rem;
+    line-height:100%;
+    text-align:center;
+    width:10rem;
+    position:absolute;
+    top:0px;
+    left:0px;
+    text-shadow:2px 2px 5px #000000;
+}
+.officialMarker{
+    width:99%;
+    border-radius:25px 25px 10px 10px;
+    background-color:#f88335;
+    border-style:solid;
+    border-color:#00D7FF;
+    color:#000000;
+    text-align:center;
+    line-height:100%;
+}
+.officialMarker img{
+    width:15%;
+}
+#banner{
+    width:100%;
+    text-align:center;
+}
+#bannerImg{
+    width:30%;
+}
+#icon{
+    width:12%;
+}
