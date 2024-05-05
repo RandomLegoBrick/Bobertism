@@ -69,4 +69,39 @@ const BOBERT_LIST = {
         "name" : "Bobert Gasp",
         "description" : "What did you just say!?"
     },
+    "bidenbert" : {
+        "source" : "bidenbert.png",
+        "name" : "BidenBert",
+        "description" : "*sniff*"
+    },
+    "blackbert" : {
+        "source" : "blackbert.png",
+        "name" : "Blackbert",
+        "description" : "You dare to sail the high seas?"
+    },
+    "bobturk" : {
+        "source" : "bobturk.svg",
+        "name" : "Bobturk",
+        "description" : "Gobble Gobble"
+    },
+    "cowbert" : {
+        "source" : "cowbert.png",
+        "name" : "Cowbert",
+        "description" : "Yeehaw"
+    },
+    "stewbert" : {
+        "source" : "stewbert.png",
+        "name" : "Stewbert",
+        "description" : "Greetings? Can I help you make tasty chip stew?"
+    },
+    "nerdbobert" : {
+        "source" : "nerdbobert.png",
+        "name" : "Nerd Bobert",
+        "description" : "But Awchually!"
+    },
+    "penutbert" : {
+        "source" : "penutbert.svg",
+        "name" : "Penutbert",
+        "description" : "My knowledge surpases yours"
+    },
 };
